@@ -53,7 +53,6 @@ class confirm_delete_group extends dynamic_form {
 
     /**
      * Returns system context for form
-     * @return context
      * @throws \dml_exception
      */
     protected function get_context_for_dynamic_submission(): context {
@@ -62,7 +61,6 @@ class confirm_delete_group extends dynamic_form {
 
     /**
      * Checks if user has the required capability to view this form
-     * @return void
      * @throws \dml_exception
      * @throws \required_capability_exception
      */
@@ -84,14 +82,12 @@ class confirm_delete_group extends dynamic_form {
 
     /**
      * Sets the form data - nothing to do here for us at the moment
-     * @return void
      */
     public function set_data_for_dynamic_submission(): void {
     }
 
     /**
      * Returns the url for the form submission
-     * @return moodle_url
      */
     protected function get_page_url_for_dynamic_submission(): moodle_url {
         return new moodle_url('/admin/tool/thi_learning_companions/groups/index.php');

@@ -28,7 +28,7 @@ namespace tool_thi_learning_companions;
 /**
  * Note to developers: Don't let your IDE fool you. The function is being used.
  * The function name gets created dynamically in index.php inside the foreach loop.
- * @return \lang_string|string
+ * @return string
  * @throws \coding_exception
  */
 function get_dashboard_headline_comments() {
@@ -38,14 +38,13 @@ function get_dashboard_headline_comments() {
     if ($commentcount === 1) {
         $suffix = '_single';
     }
-    $headline = get_string('dashboard_comments'.$suffix, 'tool_thi_learning_companions', $commentcount);
-    return $headline;
+    return get_string('dashboard_comments'.$suffix, 'tool_thi_learning_companions', $commentcount);
 }
 
 /**
  * Note to developers: Don't let your IDE fool you. The function is being used.
  * The function name gets created dynamically in index.php inside the foreach loop.
- * @return \lang_string|string
+ * @return string
  * @throws \coding_exception
  * @throws \dml_exception
  */
@@ -56,6 +55,5 @@ function get_dashboard_headline_groups() {
     if ($groupcount === 1) {
         $suffix = '_single';
     }
-    $headline = get_string('dashboard_groups'.$suffix, 'tool_thi_learning_companions', $groupcount);
-    return $headline;
+    return get_string('dashboard_groups'.$suffix, 'tool_thi_learning_companions', $groupcount);
 }

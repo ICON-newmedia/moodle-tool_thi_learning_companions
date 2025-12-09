@@ -40,7 +40,7 @@ $PAGE->navbar->add(get_string('navbar_groups', 'tool_thi_learning_companions'),
     new moodle_url('/admin/tool/thi_learning_companions/groups/index.php')
 );
 
-$groups = \local_thi_learning_companions\groups::get_all_groups(true, true);
+$groups = \local_thi_learning_companions\groups::get_all_groups();
 
 echo $OUTPUT->header();
 $hasgroups = count($groups) > 0;

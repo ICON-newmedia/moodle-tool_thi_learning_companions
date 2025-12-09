@@ -29,6 +29,7 @@ global $DB;
 $action = required_param('action', PARAM_TEXT);
 
 if ($action == 'deletecomment') {
+    /** @var int $commentid */
     $commentid = required_param('commentid', PARAM_INT);
 
     if (\local_thi_learning_companions\chats::delete_comment($commentid)) {
@@ -39,6 +40,7 @@ if ($action == 'deletecomment') {
 }
 
 if ($action == 'untagcomment') {
+    /** @var int $commentid */
     $commentid = required_param('commentid', PARAM_INT);
 
     if (\local_thi_learning_companions\chats::unflag_comment($commentid)) {

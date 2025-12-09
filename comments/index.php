@@ -22,8 +22,8 @@
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once('../../../../config.php');
-require_once('../../../../local/thi_learning_companions/lib.php');
+require_once(__DIR__ . '/../../../../config.php');
+require_once(__DIR__ . '/../../../../local/thi_learning_companions/lib.php');
 require_login();
 global $OUTPUT, $PAGE, $CFG;
 
@@ -46,9 +46,10 @@ $comments = \local_thi_learning_companions\chats::get_all_flagged_comments(true,
 
 echo $OUTPUT->header();
 
+/** @var ?string $notification */
 $notification = optional_param('n', null, PARAM_TEXT);
 if (!is_null($notification)) {
-    $notificationtype = substr($notification, 0, 2) == 'n_' ? 'error' : 'success';
+    $notificationtype = str_starts_with($notification, 'n_') ? 'error' : 'success';
     echo $OUTPUT->notification(get_string('notification_'.$notification, 'local_thi_learning_companions'), $notificationtype);
 }
 

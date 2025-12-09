@@ -44,6 +44,7 @@ $dashboardrows[0] = ['items' => []];
 foreach ($modules as $module) {
     $headlinefunction = '\tool_thi_learning_companions\get_dashboard_headline_'.ucfirst($module);
 
+    // @phpstan-ignore function.alreadyNarrowedType
     if (function_exists($headlinefunction)) {
         $headline = $headlinefunction();
     } else {
