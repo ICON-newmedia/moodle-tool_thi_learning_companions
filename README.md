@@ -1,3 +1,6 @@
+# Archived
+Use https://github.com/thi-success-ai/tool_thi_learning_companions instead
+
 # Learning Companions #
 
 # Technische Hochschule
